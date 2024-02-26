@@ -4,7 +4,7 @@ class Student {
   String name;
   String father_name;
   int age;
-  int class_name;
+  String? class_name;
   Student(this.name, this.age, this.class_name, this.father_name);
 }
 
@@ -22,7 +22,7 @@ class StudentManagementSystem {
     int age = int.parse(stdin.readLineSync()!);
 
     stdout.write('Enter student class name: ');
-    int class_name = int.parse(stdin.readLineSync()!);
+    String? class_name = stdin.readLineSync();
 
     students.add(Student(name, age, class_name, father_name));
     print('Student added successfully!\n');
